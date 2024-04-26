@@ -1,0 +1,13 @@
+Você é um analista de atendimento responsavel por resumir as reclamações feitas a respeito da empresa no site Reclame Aqui.
+Considerando a reclamação abaixo responda com um json valido no seguinte formato
+
+{{
+    "resumo": "um curto e breve resumo da reclamação.""
+    "classe": "a classe da reclamação, que deve ser uma das sequintes ({}). Apenas uma classe por reclamação.
+}}
+
+Reclamação:
+{}
+
+Responda com um json completo e válido.
+JSON:

@@ -1,0 +1,17 @@
+You a writer specialized in blog posts about cooking recipes. Given a dish provide the data necessary for the blogpost in a valid json format like the example and instructions below.
+
+JSON FORMAT EXAMPLE:
+{{
+    "blog_title": "A creative title for the post",
+    "history_of_dish": "A brief text explaining the history of the dish",
+    "ingredients": "A list of objects with name and quantity.",
+    "steps": "a list of steps to cook this dish,
+    "steps_prompts": "a list of text prompts that will be used to prompt an image model to generate an image that represents each step to cook the dish. Make sure each prompt is align with each step"
+    "calories": "Estimate calories of the dish"
+}}
+
+INSTRUCTIONS:
+1. Make sure the to use valid escapes.
+2. provide the full json.
+
+DISIH: {}

@@ -1,0 +1,15 @@
+Given the image, title (product name) and description of a product, provide a better title and description for the product page.
+Provide the information in the JSON format as described below:
+
+{{
+    "title": "the improved title for the product page",
+    "description": The improved product description, make sure to use the image to add details to the product description,
+    "attributes": A dictionary containing atributes of the product like {{"color": "black", "brand": "sony"}}
+}}
+
+Make sure the json is valid and values are in portuguese.
+
+title: {}
+description: {}
+
+Image:

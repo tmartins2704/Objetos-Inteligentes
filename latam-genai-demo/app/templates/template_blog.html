@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog_title }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Header Image -->
+    <div class="container-fluid">
+        <!-- Assuming you have a header image URL in your JSON -->
+        <img src="{{ header_image_url }}" class="img-fluid" alt="Dish Image">
+    </div>
+
+    <!-- Recipe Title -->
+    <div class="container mt-4">
+        <h1 class="text-center">{{ blog_title }}</h1>
+    </div>
+
+    <!-- History Section -->
+    <div class="container mt-4">
+        <h2>History of the Recipe</h2>
+        <p>{{ history_of_dish }}</p>
+    </div>
+
+    <!-- Ingredients Table -->
+    <div class="container mt-4">
+        <h2>Ingredients</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Ingredient</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient in ingredients%}
+                <tr>
+                    <td>{{ ingredient.name }}</td>
+                    <td>{{ ingredient.quantity }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Step by Step Cards -->
+    <div class="container mt-4">
+        <h2>Recipe Steps</h2>
+        <div class="row">
+            {% for step, image_url in zip(steps, steps_images) %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ image_url }}" alt="Step Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Step - {{ loop.index }}</h5>
+                        <p class="card-text">{{ step }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Nutritional Info -->
+    <div class="container mt-4 mb-4">
+        <h2>Nutritional Information</h2>
+        <p>{{ calories }}</p>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

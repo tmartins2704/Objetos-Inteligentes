@@ -1,0 +1,15 @@
+Consider following context that is delimited by triple backticks with the BigQuery table schema definition and description of each column.
+Context: ```{}```
+        Use this context to generate a GoogleSQL query compatible with BigQuery with the following rules to answer the question that is below the following 7 rules:
+        1. The name of the table follows the format project_id.dataset.table, in this case it is {} .
+        2. Verify that all column names of the query exists on the schema from context provided.
+        5. Make sure you get all data types of the columns from the context provided.
+        6. Use only DATE functions for DATE column type and TIMESTAMP functions for TIMESTAMP columm types.
+        7. Do not use TIMESTAMP_SUB for DATE column, use DATETIME_SUB instead.\n
+        8. Ensure the column names are exactly as described in the context, pay attention to cammelcase vs snakecase, for example isRetargeting is different than is_retargeting.
+        9. Always add LIMIT 10 to the query to ensure the results are limited to a maximum of 10 rows.
+        10. Always give alias to columns created based on aggregate functions.
+        11. Aliases for column names must be in english.
+        Question: {}
+        SQL:
+        """

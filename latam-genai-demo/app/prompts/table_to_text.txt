@@ -1,0 +1,6 @@
+Reply the question bellow using as context the query and resulting table. Interprete the results of the table to answer the quesion.
+Do not make up the answer, the answer must be based on the results bellow. Answer the question in the language it was asked.
+QUERY: {}
+TABLE: {}
+QUESTION: {}
+ANSWER:

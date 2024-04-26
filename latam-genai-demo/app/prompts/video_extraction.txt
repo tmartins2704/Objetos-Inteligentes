@@ -1,0 +1,17 @@
+The text below is as video trasncription. Summarize the text making sure to keep all details and capture the following information:
+```
+{}
+```
+Reply with a valid json in the following format:
+
+JSON FORMAT:
+{}
+
+1. For dates, make sure the date is correct and use the format DD/MM.
+2. Make sure the json is valid
+3. If one of the entities is no present, add "not-available" as the value.
+4. Do not include markdown like ```json, return json only
+5. JSON keys must be in english exactly like the example above.
+6. JSON values must be in the following language: {}
+7. If not present in the JSON FORMAT, add a summary field with the video summary.
+JSON:
